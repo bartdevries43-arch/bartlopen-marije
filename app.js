@@ -1,5 +1,5 @@
 /* ================================================================== *
- *  Marije, Run Coach · marathon uitlopen
+ *  Marije, Run Coach · Marathon van Barcelona
  *  22 weken vanaf ma 12 okt 2026, marathon op zondag 14 maart 2027.
  *  2 flexibele trainingen per week: snelheid en rustig langer.
  *  Gebouwd op de hoofdapp van Kim. Alles lokaal in de browser.
@@ -14,12 +14,12 @@ const CONFIG = {
     "Lekker begonnen, strijder!",
     "Je bouwt 'm op, strijder.",
     "Halverwege, knap volgehouden! ⚡",
-    "Bijna klaar voor 42,2, strijder!",
-    "Marathon uitgelopen! Wat een strijder 🏅",
+    "Bijna klaar voor Barcelona, strijder!",
+    "Barcelona uitgelopen! Wat een strijder 🏅",
   ],
-  appName:    "Op naar de marathon",
+  appName:    "Op naar Barcelona",
   runner:     "Marije",
-  goal:       "Marathon uitlopen",
+  goal:       "Marathon van Barcelona",
   startDate:  new Date(2026, 9, 12),
   storeKey:   "marije.log.v1",
   coachName:  "Coach Bart",
@@ -69,7 +69,7 @@ const COACH = {
     "Lies zeurt? Even wandelen en rustig verder. Blijft het, dan stop je.",
   ],
   doel: [
-    "Marathontempo, strijder. Zo voelt 14 maart.",
+    "Marathontempo, strijder. Zo voelt Barcelona.",
     "Rustig-vlot: je moet dit uren kunnen volhouden.",
     "Niet sneller dan afgesproken. Beheersing is hier de training.",
     "Onthoud dit gevoel, dit is je racetempo.",
@@ -345,7 +345,7 @@ const PLAN = [
       "Leg alvast je racekleding en eten klaar om te testen",
     ] }),
   ]},
-  { week: 22, dates: "8–14 mrt", phase: "Fase 5 · Afbouwen en racen", taper: true, race: true, raceLabel: "🏅 Doelrace · marathon", raceSub: "Marathon · uitlopen is winnen", sessions: [
+  { week: 22, dates: "8–14 mrt", phase: "Fase 5 · Afbouwen en racen", taper: true, race: true, raceLabel: "🏅 Doelrace · Barcelona", raceSub: "Marathon van Barcelona · uitlopen is winnen", sessions: [
     ma({ zone: "herstel", km: 5, title: "5 km los", goal: "Benen los, hoofd rustig", blocks: [
       "5 km heel rustig",
       "Deze week geen voetbal meer, je benen moeten fris zijn",
@@ -355,9 +355,11 @@ const PLAN = [
       "3× 1 km op marathontempo, met 2 min rustig ertussen",
       "Rustig uitlopen",
       "Daarna rust tot zondag, en extra koolhydraten de laatste twee dagen",
+      "Reis je naar Barcelona? Kom minstens een dag van tevoren aan en loop zaterdag niet de hele stad door",
     ] }),
-    zo({ zone: "doel", km: 42.2, kind: "Doelrace", title: "🏁 Marathon", goal: "Zondag 14 maart · uitlopen is winnen", why: "Twee-en-twintig weken geleden liep je 4 km. Vandaag loop je er 42,2. Je hebt elke stap opgebouwd, je lange zondagen gelopen en je lies sterk gemaakt. Start rustiger dan je wil, eet en drink op tijd, en geniet van elke kilometer. Uitlopen is het doel, en dat ga je doen.", blocks: [
-      "Ontbijt 3 uur voor de start: brood, banaan, iets wat je kent",
+    zo({ zone: "doel", km: 42.2, kind: "Doelrace", title: "🏁 Marathon van Barcelona", goal: "Zondag 14 maart · uitlopen is winnen", why: "Twee-en-twintig weken geleden liep je 4 km. Vandaag loop je er 42,2. Je hebt elke stap opgebouwd, je lange zondagen gelopen en je lies sterk gemaakt. Start rustiger dan je wil, eet en drink op tijd, en geniet van elke kilometer door Barcelona. Uitlopen is het doel, en dat ga je doen.", blocks: [
+      "Ontbijt 3 uur voor de start: neem je eigen vertrouwde ontbijt mee naar Barcelona",
+      "Is het warm? Start dan nog rustiger en drink bij elke post, ook als je geen dorst hebt",
       "Eerste 10 km bijna te rustig, ook als iedereen je inhaalt",
       "Eet elke 30 tot 40 min en drink bij elke drinkpost",
       "Bij kilometer 30 begint de echte marathon: klein blijven, ritme houden",
@@ -369,7 +371,7 @@ const PLAN = [
 
 const INFO = [
   { icon: "🎯", title: "Je doel: 42,2 km uitlopen", items: [
-    "Zondag 14 maart 2027, je eerste marathon. Uitlopen is het doel, elke minuut sneller is mooi meegenomen.",
+    "Zondag 14 maart 2027: de Marathon van Barcelona, je eerste marathon. Uitlopen is het doel, elke minuut sneller is mooi meegenomen.",
     "Eerlijk is eerlijk: van 4 km naar 42 km in 22 weken is ambitieus. Het kan, omdat je fit bent en veel voetbalt, maar je pezen en je lies moeten wel kunnen volgen.",
     "Je checkpoint is de halve afstand op zondag 10 januari. Gaat die goed, dan zit je op schema.",
     "Lukt de 28 km in februari echt niet, of blijft je lies opspelen? Dan is de halve marathon ook een prachtig doel. Geen falen, maar slim kiezen.",
@@ -415,6 +417,13 @@ const INFO = [
     "Eet elke 30 tot 40 min en drink bij elke drinkpost, ook zonder dorst.",
     "Bij kilometer 30 begint de echte marathon. Wandelen bij een drinkpost mag altijd, uitlopen is winst.",
   ]},
+  { icon: "✈️", title: "Op naar Barcelona", items: [
+    "Je loopt in het buitenland, dus plan je reis rustig: kom minstens een dag van tevoren aan.",
+    "Neem je vertrouwde ontbijt en je eigen gels of snoep mee. Op de racedag probeer je niets nieuws.",
+    "In maart kan het in Barcelona al warm zijn. Train je lange zondagen in februari af en toe met wat meer kleding aan, en drink op de racedag bij elke post.",
+    "Bekijk vooraf op de site van de organisatie het parcours, de starttijd en waar de drinkposten staan.",
+    "Loop de dag voor de race niet de hele stad door: sightseeing doe je maandag.",
+  ]},
   { icon: "😴", title: "Herstel en slaap", items: [
     "Werk, studie, drie keer voetbal en drie keer lopen is veel. Slaap is je beste training.",
     "Mik op 8 uur, zeker in de nacht na je lange duurloop.",
@@ -432,7 +441,7 @@ const BADGES = [
   { id: "honderd", icon: "💯", name: "Honderd km",      desc: "100 km totaal gelopen",    test: (s) => s.km >= 100 },
   { id: "dertig",  icon: "🏔️", name: "Dertig",          desc: "30 km in één training",    test: (s) => s.maxDist >= 30 },
   { id: "vierhonderd", icon: "🚀", name: "Vierhonderd km", desc: "400 km totaal gelopen", test: (s) => s.km >= 400 },
-  { id: "finish",  icon: "🏅", name: "Marathonloper",   desc: "42,2 km op 14 maart",      test: (s) => s.marathonDone },
+  { id: "finish",  icon: "🏅", name: "Marathonloper",   desc: "Barcelona, 14 maart",      test: (s) => s.marathonDone },
 ];
 
 /* ================================================================== *
@@ -1220,7 +1229,7 @@ function openDetail(week, day) {
       toast(!isRaceDetail
         ? DONE[Math.floor(Math.random() * DONE.length)]
         : w.race
-          ? "🏅 Marathon uitgelopen! Wat een strijder, Marije!"
+          ? "🏅 Barcelona uitgelopen! Wat een strijder, Marije!"
           : `🎯 ${raceNaam} gelopen! Sterk, strijder.`);
     }
     closeDetail();
